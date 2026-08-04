@@ -1,0 +1,13 @@
+sentence-transformers
+faiss-cpu
+numpy
+pandas
+pydantic
+tqdm
+
+transformers
+torch
+
+transformers
+torch
+bitsandbytes

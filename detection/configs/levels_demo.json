@@ -1,0 +1,210 @@
+{
+  "scenarios": [
+    {
+      "id": "exact_repeat_actions",
+      "title": "Exact repeated tool calls",
+      "description": "Agent repeatedly calls the same search tool with identical arguments and observations, making no progress.",
+      "events": [
+        {
+          "loop_idx": 0,
+          "question": "Find the latest annual report for ACME Corp.",
+          "subtask": "document_retrieval",
+          "action": "search_docs",
+          "tool_name": "doc_search",
+          "tool_args": {
+            "query": "ACME Corp annual report 2025"
+          },
+          "observation": "Returned ACME Corp annual report 2025 PDF.",
+          "response": "I found the ACME Corp annual report for 2025."
+        },
+        {
+          "loop_idx": 1,
+          "question": "Find the latest annual report for ACME Corp.",
+          "subtask": "document_retrieval",
+          "action": "search_docs",
+          "tool_name": "doc_search",
+          "tool_args": {
+            "query": "ACME Corp annual report 2025"
+          },
+          "observation": "Returned ACME Corp annual report 2025 PDF.",
+          "response": "I found the ACME Corp annual report for 2025."
+        },
+        {
+          "loop_idx": 2,
+          "question": "Find the latest annual report for ACME Corp.",
+          "subtask": "document_retrieval",
+          "action": "search_docs",
+          "tool_name": "doc_search",
+          "tool_args": {
+            "query": "ACME Corp annual report 2025"
+          },
+          "observation": "Returned ACME Corp annual report 2025 PDF.",
+          "response": "I found the ACME Corp annual report for 2025."
+        }
+      ]
+    },
+    {
+      "id": "similarity_preserving_hashing",
+      "title": "Near-duplicate search queries",
+      "description": "Agent issues slightly different search queries that are syntactically close and semantically equivalent.",
+      "events": [
+        {
+          "loop_idx": 0,
+          "question": "Summarize recent earnings for ACME Corp.",
+          "subtask": "earnings_summary",
+          "action": "search_news",
+          "tool_name": "news_search",
+          "tool_args": {
+            "query": "ACME Corp Q4 2025 earnings"
+          },
+          "observation": "News articles about ACME Corp Q4 2025 earnings.",
+          "response": "ACME Corp reported strong Q4 2025 earnings with revenue growth of 15%."
+        },
+        {
+          "loop_idx": 1,
+          "question": "Summarize recent earnings for ACME Corp.",
+          "subtask": "earnings_summary",
+          "action": "search_news",
+          "tool_name": "news_search",
+          "tool_args": {
+            "query": "ACME Q4 FY25 earnings results"
+          },
+          "observation": "Very similar articles about ACME Corp Q4 2025 earnings.",
+          "response": "The Q4 FY25 earnings for ACME Corp were strong with double-digit revenue growth."
+        },
+        {
+          "loop_idx": 2,
+          "question": "Summarize recent earnings for ACME Corp.",
+          "subtask": "earnings_summary",
+          "action": "search_news",
+          "tool_name": "news_search",
+          "tool_args": {
+            "query": "ACME quarterly earnings Q4 2025"
+          },
+          "observation": "The same earnings news pages as before.",
+          "response": "ACME's quarterly earnings for Q4 2025 show continued strong performance."
+        }
+      ]
+    },
+    {
+      "id": "semantic_similarity_repeat",
+      "title": "Paraphrased planning loop",
+      "description": "Agent repeatedly refines a plan in semantically similar ways without changing the underlying strategy.",
+      "events": [
+        {
+          "loop_idx": 0,
+          "question": "Design a 3-step onboarding flow for new users.",
+          "subtask": "plan_onboarding",
+          "action": "reflect_and_plan",
+          "tool_name": "planner",
+          "tool_args": {
+            "goal": "new user onboarding"
+          },
+          "observation": "Initial plan drafted.",
+          "response": "Plan: 1) Welcome email, 2) Product tour, 3) Follow-up survey."
+        },
+        {
+          "loop_idx": 1,
+          "question": "Design a 3-step onboarding flow for new users.",
+          "subtask": "plan_onboarding",
+          "action": "reflect_and_plan",
+          "tool_name": "planner",
+          "tool_args": {
+            "goal": "new user onboarding"
+          },
+          "observation": "Revisiting plan.",
+          "response": "Updated plan: 1) Intro email, 2) Guided walkthrough, 3) Feedback form."
+        },
+        {
+          "loop_idx": 2,
+          "question": "Design a 3-step onboarding flow for new users.",
+          "subtask": "plan_onboarding",
+          "action": "reflect_and_plan",
+          "tool_name": "planner",
+          "tool_args": {
+            "goal": "new user onboarding"
+          },
+          "observation": "Still revisiting plan.",
+          "response": "Refined plan: 1) Welcome message, 2) Interactive product tour, 3) short satisfaction survey."
+        }
+      ]
+    },
+    {
+      "id": "response_hashing_repeat",
+      "title": "Repeated error responses",
+      "description": "Agent gets stuck returning the same error message multiple times while continuing to call tools.",
+      "events": [
+        {
+          "loop_idx": 0,
+          "question": "Download the latest ACME Corp earnings call transcript.",
+          "subtask": "download_transcript",
+          "action": "fetch_transcript",
+          "tool_name": "transcript_api",
+          "tool_args": {
+            "ticker": "ACME",
+            "quarter": "Q4 2025"
+          },
+          "observation": "API returned HTTP 500 error.",
+          "response": "The transcript API is currently unavailable. Please try again later."
+        },
+        {
+          "loop_idx": 1,
+          "question": "Download the latest ACME Corp earnings call transcript.",
+          "subtask": "download_transcript",
+          "action": "fetch_transcript",
+          "tool_name": "transcript_api",
+          "tool_args": {
+            "ticker": "ACME",
+            "quarter": "Q4 2025"
+          },
+          "observation": "Same HTTP 500 error.",
+          "response": "The transcript API is currently unavailable. Please try again later."
+        },
+        {
+          "loop_idx": 2,
+          "question": "Download the latest ACME Corp earnings call transcript.",
+          "subtask": "download_transcript",
+          "action": "fetch_transcript",
+          "tool_name": "transcript_api",
+          "tool_args": {
+            "ticker": "ACME",
+            "quarter": "Q4 2025"
+          },
+          "observation": "Still HTTP 500 error.",
+          "response": "The transcript API is currently unavailable. Please try again later."
+        }
+      ]
+    },
+    {
+      "id": "llm_judge_hallucination",
+      "title": "Hallucinated answer",
+      "description": "Agent produces a fluent but incorrect answer not supported by the observed context.",
+      "events": [
+        {
+          "loop_idx": 0,
+          "question": "What is the capital of France?",
+          "subtask": "qa_fact",
+          "action": "qa_generation",
+          "tool_name": "qa_model",
+          "tool_args": {
+            "mode": "direct"
+          },
+          "observation": "No external tools used; internal model only.",
+          "response": "The capital of France is Berlin."
+        },
+        {
+          "loop_idx": 1,
+          "question": "What is the capital of France?",
+          "subtask": "qa_fact",
+          "action": "qa_generation",
+          "tool_name": "qa_model",
+          "tool_args": {
+            "mode": "direct"
+          },
+          "observation": "Internal model reflection.",
+          "response": "Actually, I think the capital of France is Munich."
+        }
+      ]
+    }
+  ]
+}
