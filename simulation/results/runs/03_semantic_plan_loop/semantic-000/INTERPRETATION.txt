@@ -1,0 +1,19 @@
+Run: semantic-000
+Scenario: Semantic plan repetition
+Expected label: semantic_repeat
+Detector prediction: semantic_repeat
+Detected level: 3
+Result: CORRECT
+
+How to interpret:
+The planner paraphrases essentially the same plan after unhelpful criticism and makes no progress.
+
+Resource comparison for this controlled run:
+- Baseline tokens: 2752
+- Protected tokens: 977
+- Baseline tool calls: 6
+- Protected tool calls: 2
+- Detector overhead: 3.088 ms
+
+Publication warning:
+This is a controlled synthetic run. It can be used to demonstrate implementation behavior and ablation logic, but not real-world generalization.

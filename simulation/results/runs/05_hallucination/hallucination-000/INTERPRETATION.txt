@@ -1,0 +1,19 @@
+Run: hallucination-000
+Scenario: Hallucinated or unsupported answer
+Expected label: hallucination
+Detector prediction: hallucination
+Detected level: 5
+Result: CORRECT
+
+How to interpret:
+The generated answer contradicts the available evidence and should be flagged by the judge layer.
+
+Resource comparison for this controlled run:
+- Baseline tokens: 1473
+- Protected tokens: 1208
+- Baseline tool calls: 3
+- Protected tool calls: 2
+- Detector overhead: 1.215 ms
+
+Publication warning:
+This is a controlled synthetic run. It can be used to demonstrate implementation behavior and ablation logic, but not real-world generalization.

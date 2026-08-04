@@ -1,0 +1,19 @@
+Run: healthy_code-000
+Scenario: Healthy progressive code repair
+Expected label: healthy
+Detector prediction: healthy
+Detected level: 0
+Result: CORRECT
+
+How to interpret:
+The tool repeats, but the number of failures decreases. This is legitimate repetition with progress.
+
+Resource comparison for this controlled run:
+- Baseline tokens: 3016
+- Protected tokens: 3016
+- Baseline tool calls: 6
+- Protected tool calls: 6
+- Detector overhead: 5.032 ms
+
+Publication warning:
+This is a controlled synthetic run. It can be used to demonstrate implementation behavior and ablation logic, but not real-world generalization.

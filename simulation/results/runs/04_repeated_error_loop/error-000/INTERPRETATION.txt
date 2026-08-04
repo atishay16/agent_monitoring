@@ -1,0 +1,19 @@
+Run: error-000
+Scenario: Repeated error response
+Expected label: repeated_error_response
+Detector prediction: repeated_error_response
+Detected level: 4
+Result: CORRECT
+
+How to interpret:
+Different attempts continue to expose the same user-visible failure, indicating outcome stagnation.
+
+Resource comparison for this controlled run:
+- Baseline tokens: 2652
+- Protected tokens: 952
+- Baseline tool calls: 6
+- Protected tool calls: 2
+- Detector overhead: 1.523 ms
+
+Publication warning:
+This is a controlled synthetic run. It can be used to demonstrate implementation behavior and ablation logic, but not real-world generalization.

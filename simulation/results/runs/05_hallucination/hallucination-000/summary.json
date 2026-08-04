@@ -1,0 +1,22 @@
+{
+  "scenario": "hallucination",
+  "truth_label": "hallucination",
+  "truth_positive": true,
+  "predicted_label": "hallucination",
+  "predicted_positive": true,
+  "detected_level": 5,
+  "detection_step": 1.0,
+  "detection_delay": 0.0,
+  "baseline_tokens": 1473,
+  "protected_tokens": 1208,
+  "baseline_tool_calls": 3,
+  "protected_tool_calls": 2,
+  "baseline_latency_ms": 2929.0266449054125,
+  "protected_latency_ms": 1975.2669246374423,
+  "baseline_cost_usd": 0.003663,
+  "protected_cost_usd": 0.0030405,
+  "detector_overhead_ms": 1.215166,
+  "detector_cost_usd": 0.00018,
+  "baseline_success": 0,
+  "protected_success": 1
+}

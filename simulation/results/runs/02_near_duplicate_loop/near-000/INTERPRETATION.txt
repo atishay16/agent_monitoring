@@ -1,0 +1,19 @@
+Run: near-000
+Scenario: Near-duplicate search loop
+Expected label: redundant_search_loop
+Detector prediction: redundant_search_loop
+Detected level: 2
+Result: CORRECT
+
+How to interpret:
+The query wording changes, but the operational search intent and returned information remain the same.
+
+Resource comparison for this controlled run:
+- Baseline tokens: 2928
+- Protected tokens: 923
+- Baseline tool calls: 6
+- Protected tool calls: 2
+- Detector overhead: 1.129 ms
+
+Publication warning:
+This is a controlled synthetic run. It can be used to demonstrate implementation behavior and ablation logic, but not real-world generalization.

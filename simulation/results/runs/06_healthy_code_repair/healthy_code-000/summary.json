@@ -1,0 +1,22 @@
+{
+  "scenario": "healthy_code_repair",
+  "truth_label": "healthy",
+  "truth_positive": false,
+  "predicted_label": "healthy",
+  "predicted_positive": false,
+  "detected_level": 0,
+  "detection_step": null,
+  "detection_delay": null,
+  "baseline_tokens": 3016,
+  "protected_tokens": 3016,
+  "baseline_tool_calls": 6,
+  "protected_tool_calls": 6,
+  "baseline_latency_ms": 5622.348980064712,
+  "protected_latency_ms": 5627.381230064712,
+  "baseline_cost_usd": 0.007116,
+  "protected_cost_usd": 0.007116,
+  "detector_overhead_ms": 5.0322499999999994,
+  "detector_cost_usd": 0.0,
+  "baseline_success": 1,
+  "protected_success": 1
+}

@@ -1,0 +1,22 @@
+{
+  "scenario": "semantic_plan_loop",
+  "truth_label": "semantic_repeat",
+  "truth_positive": true,
+  "predicted_label": "semantic_repeat",
+  "predicted_positive": true,
+  "detected_level": 3,
+  "detection_step": 1.0,
+  "detection_delay": 0.0,
+  "baseline_tokens": 2752,
+  "protected_tokens": 977,
+  "baseline_tool_calls": 6,
+  "protected_tool_calls": 2,
+  "baseline_latency_ms": 6191.3539274164295,
+  "protected_latency_ms": 2277.0493064364723,
+  "baseline_cost_usd": 0.0065535,
+  "protected_cost_usd": 0.0022665,
+  "detector_overhead_ms": 3.088375,
+  "detector_cost_usd": 0.00018,
+  "baseline_success": 0,
+  "protected_success": 1
+}

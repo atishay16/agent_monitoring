@@ -1,0 +1,19 @@
+Run: exact-000
+Scenario: Exact repeated action
+Expected label: repeated_action
+Detector prediction: repeated_action
+Detected level: 1
+Result: CORRECT
+
+How to interpret:
+The same canonical action-state record is executed again without measurable progress.
+
+Resource comparison for this controlled run:
+- Baseline tokens: 2883
+- Protected tokens: 1082
+- Baseline tool calls: 6
+- Protected tool calls: 2
+- Detector overhead: 1.423 ms
+
+Publication warning:
+This is a controlled synthetic run. It can be used to demonstrate implementation behavior and ablation logic, but not real-world generalization.

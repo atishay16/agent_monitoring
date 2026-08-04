@@ -1,0 +1,22 @@
+{
+  "scenario": "healthy_async_polling",
+  "truth_label": "healthy",
+  "truth_positive": false,
+  "predicted_label": "healthy",
+  "predicted_positive": false,
+  "detected_level": 0,
+  "detection_step": null,
+  "detection_delay": null,
+  "baseline_tokens": 2261,
+  "protected_tokens": 2261,
+  "baseline_tool_calls": 5,
+  "protected_tool_calls": 5,
+  "baseline_latency_ms": 4849.114624866528,
+  "protected_latency_ms": 4853.795083866528,
+  "baseline_cost_usd": 0.005403,
+  "protected_cost_usd": 0.005403,
+  "detector_overhead_ms": 4.680459,
+  "detector_cost_usd": 0.0,
+  "baseline_success": 1,
+  "protected_success": 1
+}

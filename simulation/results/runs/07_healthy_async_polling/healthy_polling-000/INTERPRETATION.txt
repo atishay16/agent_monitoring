@@ -1,0 +1,19 @@
+Run: healthy_polling-000
+Scenario: Healthy asynchronous polling
+Expected label: healthy
+Detector prediction: healthy
+Detected level: 0
+Result: CORRECT
+
+How to interpret:
+The status tool repeats, but the external job advances toward completion. It must not be stopped.
+
+Resource comparison for this controlled run:
+- Baseline tokens: 2261
+- Protected tokens: 2261
+- Baseline tool calls: 5
+- Protected tool calls: 5
+- Detector overhead: 4.680 ms
+
+Publication warning:
+This is a controlled synthetic run. It can be used to demonstrate implementation behavior and ablation logic, but not real-world generalization.

@@ -1,0 +1,22 @@
+{
+  "scenario": "repeated_error_loop",
+  "truth_label": "repeated_error_response",
+  "truth_positive": true,
+  "predicted_label": "repeated_error_response",
+  "predicted_positive": true,
+  "detected_level": 4,
+  "detection_step": 1.0,
+  "detection_delay": 0.0,
+  "baseline_tokens": 2652,
+  "protected_tokens": 952,
+  "baseline_tool_calls": 6,
+  "protected_tool_calls": 2,
+  "baseline_latency_ms": 5540.223713048899,
+  "protected_latency_ms": 2015.3888221640077,
+  "baseline_cost_usd": 0.00621,
+  "protected_cost_usd": 0.0022155,
+  "detector_overhead_ms": 1.52325,
+  "detector_cost_usd": 0.00018,
+  "baseline_success": 0,
+  "protected_success": 1
+}
