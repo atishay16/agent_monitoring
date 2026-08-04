@@ -1,0 +1,47 @@
+{
+  "status": "ILLUSTRATIVE_SYNTHETIC_RESULT_NOT_FOR_FINAL_PUBLICATION",
+  "langgraph_used": true,
+  "semantic_backend": "tfidf",
+  "seed": 42,
+  "runs_per_scenario": 30,
+  "total_runs": 210,
+  "total_steps": 1140,
+  "scenario_counts": {
+    "near_duplicate_loop": 30,
+    "repeated_error_loop": 30,
+    "hallucination": 30,
+    "semantic_plan_loop": 30,
+    "healthy_async_polling": 30,
+    "exact_loop": 30,
+    "healthy_code_repair": 30
+  },
+  "full_detector": {
+    "tp": 150,
+    "fp": 0,
+    "tn": 60,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "false_flags_per_100_healthy_runs": 0.0,
+    "mean_detection_delay_steps": 0,
+    "p95_detection_delay_steps": 0.0,
+    "mean_detector_overhead_ms_per_run": 2.5735343619047617,
+    "p95_detector_overhead_ms_per_run": 5.051987799999999
+  },
+  "efficiency": {
+    "token_savings_percent": 42.08895278764274,
+    "token_savings_95ci_low_percent": 36.198221103263776,
+    "token_savings_95ci_high_percent": 43.96611576963215,
+    "tool_call_savings_percent": 44.73684210526316,
+    "latency_savings_percent": 41.75566859376193,
+    "gross_cost_savings_percent": 42.514847267445674,
+    "net_cost_saved_usd": 0.5628885,
+    "baseline_task_success_rate": 0.2857142857142857,
+    "protected_task_success_rate": 1,
+    "task_success_delta_points": 71.42857142857143,
+    "intervention_precision": 1.0,
+    "premature_stop_rate": 0.0,
+    "paired_wilcoxon_token_savings_p": 1.1492557453174279e-26
+  }
+}

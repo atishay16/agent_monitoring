@@ -1,0 +1,8 @@
+scenario_order,scenario,category,expected_label,run_count,step_count,mean_steps_per_run,detected_run_percent,interpretation
+1,exact_loop,Exact repeated action,repeated_action,30,180,6.0,100.0,The same canonical action-state record is executed again without measurable progress.
+2,near_duplicate_loop,Near-duplicate search loop,redundant_search_loop,30,180,6.0,100.0,"The query wording changes, but the operational search intent and returned information remain the same."
+3,semantic_plan_loop,Semantic plan repetition,semantic_repeat,30,180,6.0,100.0,The planner paraphrases essentially the same plan after unhelpful criticism and makes no progress.
+4,repeated_error_loop,Repeated error response,repeated_error_response,30,180,6.0,100.0,"Different attempts continue to expose the same user-visible failure, indicating outcome stagnation."
+5,hallucination,Hallucinated or unsupported answer,hallucination,30,90,3.0,100.0,The generated answer contradicts the available evidence and should be flagged by the judge layer.
+6,healthy_code_repair,Healthy progressive code repair,healthy,30,180,6.0,0.0,"The tool repeats, but the number of failures decreases. This is legitimate repetition with progress."
+7,healthy_async_polling,Healthy asynchronous polling,healthy,30,150,5.0,0.0,"The status tool repeats, but the external job advances toward completion. It must not be stopped."

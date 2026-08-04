@@ -1,0 +1,6 @@
+class,support,precision,recall,f1,mean_delay_steps
+repeated_action,30,1.0,1.0,1.0,0
+redundant_search_loop,30,1.0,1.0,1.0,0
+semantic_repeat,30,1.0,1.0,1.0,0
+repeated_error_response,30,1.0,1.0,1.0,0
+hallucination,30,1.0,1.0,1.0,0
