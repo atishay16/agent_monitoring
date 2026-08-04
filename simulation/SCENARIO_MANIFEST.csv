@@ -1,0 +1,8 @@
+order,scenario,category,expected_label,detector_level,purpose
+1,exact_loop,Exact repeated action,repeated_action,1,Tests SHA-256 equality over canonical records
+2,near_duplicate_loop,Near-duplicate search loop,redundant_search_loop,2,Tests SimHash and MinHash similarity
+3,semantic_plan_loop,Semantic plan repetition,semantic_repeat,3,Tests semantic similarity across paraphrases
+4,repeated_error_loop,Repeated error response,repeated_error_response,4,Tests normalized response hashing
+5,hallucination,Hallucinated or unsupported answer,hallucination,5,Tests evidence faithfulness judge
+6,healthy_code_repair,Healthy progressive code repair,healthy,none,Hard negative showing repeated actions with progress
+7,healthy_async_polling,Healthy asynchronous polling,healthy,none,Hard negative showing legitimate status polling
