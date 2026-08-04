@@ -1,1 +1,1 @@
-
+This repository contains a couple of parts - detection and simulation. Both the parts have few results which were generated. The simulation code results are trimmed so that the repo size does not increase unnecessarily. Please go through the Readme files to know more about the implementation.
